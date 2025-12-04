@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FuelChoice</string>
+    <string name="dados_do_combustivel_1">Fuel 1 Data:</string>
+    <string name="consumo">Consumption:</string>
+    <string name="km_l">km/L</string>
+    <string name="valor_litro">Price per Liter:</string>
+    <string name="r">R$</string>
+    <string name="buscar">Search</string>
+    <string name="logo">logo</string>
+    <string name="dados_do_combustivel_2">Fuel 2 Data:</string>
+    <string name="calcular">Calculate</string>
+    <string name="gasolina">Gasoline - 10km/L</string>
+    <string name="alcool">Ethanol - 7km/L</string>
+    <string name="combustivel_1_mais_economico">Fuel 1 is more economical!</string>
+    <string name="combustivel_2_mais_economico">Fuel 2 is more economical!</string>
+    <string name="informe_os_dados_dos_combustiveis_para_calcular_qual_o_mais_economico">Enter the fuel data to calculate which is more economical!</string>
+    <string name="campo_obrigatorio">Required field</string>
+    <string name="os_combustiveis_sao_igualmente_eficientes">The fuels are equally efficient!</string>
+</resources>
