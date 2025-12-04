@@ -3,6 +3,16 @@
     <style name="Base.Theme.FuelChoice" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:windowBackground">@color/background</item>
+
+        <item name="colorPrimary">@color/principal</item>
+        <item name="colorPrimaryVariant">@color/principal</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/principal</item>
+        <item name="colorSecondaryVariant">@color/principal</item>
+        <item name="colorOnSecondary">@color/black</item>
     </style>
 
     <style name="Theme.FuelChoice" parent="Base.Theme.FuelChoice" />

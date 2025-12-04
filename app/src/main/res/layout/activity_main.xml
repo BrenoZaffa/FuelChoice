@@ -7,13 +7,246 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/logo"
+        android:cropToPadding="true"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
     <TextView
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/app_name"
+        android:textColor="@color/principal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tvUso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/informe_os_dados_dos_combustiveis_para_calcular_qual_o_mais_economico"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:contentPadding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUso">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDadosCombustivel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dados_do_combustivel_1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvConsumo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/consumo"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tvDadosCombustivel1"
+                app:layout_constraintTop_toBottomOf="@+id/tvDadosCombustivel1" />
+
+            <EditText
+                android:id="@+id/etConsumo1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/km_l"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toStartOf="@+id/btListaCombustiveis1"
+                app:layout_constraintStart_toStartOf="@+id/tvConsumo1"
+                app:layout_constraintTop_toBottomOf="@+id/tvConsumo1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/btListaCombustiveis1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/buscar"
+                app:layout_constraintBottom_toBottomOf="@+id/etConsumo1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etConsumo1"
+                app:srcCompat="@drawable/outline_manage_search_24" />
+
+            <TextView
+                android:id="@+id/tvValor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/valor_litro"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/etConsumo1"
+                app:layout_constraintTop_toBottomOf="@+id/etConsumo1" />
+
+            <EditText
+                android:id="@+id/etValor1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/r"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvValor1"
+                app:layout_constraintTop_toBottomOf="@+id/tvValor1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDadosCombustivel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dados_do_combustivel_2"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvConsumo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/consumo"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tvDadosCombustivel2"
+                app:layout_constraintTop_toBottomOf="@+id/tvDadosCombustivel2" />
+
+            <EditText
+                android:id="@+id/etConsumo2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/km_l"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toStartOf="@+id/btListaCombustiveis2"
+                app:layout_constraintStart_toStartOf="@+id/tvConsumo2"
+                app:layout_constraintTop_toBottomOf="@+id/tvConsumo2"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/btListaCombustiveis2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/buscar"
+                app:layout_constraintBottom_toBottomOf="@+id/etConsumo2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etConsumo2"
+                app:srcCompat="@drawable/outline_manage_search_24" />
+
+            <TextView
+                android:id="@+id/tvValor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/valor_litro"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/etConsumo2"
+                app:layout_constraintTop_toBottomOf="@+id/etConsumo2" />
+
+            <EditText
+                android:id="@+id/etValor2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/r"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvValor2"
+                app:layout_constraintTop_toBottomOf="@+id/tvValor2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btCalcular"
+        app:layout_constraintStart_toStartOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
